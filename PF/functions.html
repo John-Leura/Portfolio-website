@@ -1,0 +1,53 @@
+<?php
+
+function db_connect($db){
+	$dbUser = "web_user";
+    $dbPassword = "[a(zrP.j/B4Z9ngt";
+	$host = "localhost"; //connect to internal database
+    $dblink = new mysqli($host, $dbUser, $dbPassword, $db);
+	return $dblink;
+}
+
+function redirect($url)
+{
+    ?>
+    <script type="text/javascript">
+        document.location.href = "<?php echo $url; ?>";
+    </script>
+    <?php die();}
+
+// Check if a value is null/empty
+function checkNull($value, $fieldName) {
+    if (empty($value)) { // Using empty() is generally better for "null/blank" checks
+        return $fieldName . " cannot be blank"; // e.g., "First Name cannot be blank"
+    }
+    return ""; // Return empty string if valid
+}
+
+// Check if a string contains only alphabet characters, hyphen, and apostrophe
+function checkAlphaHyphenApostrophe($value, $fieldName) {
+    
+    if (!preg_match("/^[a-zA-Z-']+$/", $value)) {
+        return $fieldName . " can only contain alphabet characters, hyphen, and apostrophe";
+    }
+    return "";
+}
+
+// This one checks for valid email format
+function checkEmailFormat($value) {
+    if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
+        return "Email must be a valid email address format";
+    }
+    return "";
+}
+
+// Finally this one check if phone number contains only digits
+function checkPhoneDigits($value) {
+    // Optionally allow spaces or hyphens, but assignment says "only digits"
+    if (!ctype_digit($value)) { // ctype_digit checks for only digit characters like the one he used in class for alphabet only
+        return "Phone number may only contain digits";
+    }
+    return "";
+}
+
+?>

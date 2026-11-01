@@ -43,3 +43,6 @@
 .draft-label { display: inline-block; padding: 6px 12px; border-radius: 20px; background: #dbeafe; color: #1e40af; font-size: 12px !important; font-weight: 700; letter-spacing: .08em; }
 .projects-header .preview-links { font-size: 14px; color: #475569; }
 .preview-links a { text-decoration: underline; }
+
+/* Bootstrap clearfix pseudo-elements must not occupy grid cells. */
+.projects-layout::before, .projects-layout::after { display: none; }

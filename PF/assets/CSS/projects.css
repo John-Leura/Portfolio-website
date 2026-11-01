@@ -39,3 +39,6 @@
   .project-card h2 { font-size: 24px; }
   .projects-page #menu .li-menu { float: none; }
 }
+
+/* Bootstrap clearfix pseudo-elements must not occupy grid cells. */
+.projects-layout::before, .projects-layout::after { display: none; }

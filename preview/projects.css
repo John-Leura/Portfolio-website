@@ -4,3 +4,5 @@
 .top-nav a[aria-current="page"]{color:#18399c;font-weight:700;text-decoration:underline;text-underline-offset:7px}
 .details dt{font-weight:650;color:#172554;margin-top:14px}.details dd{margin:2px 0 0}
 .document-viewer{display:block;border:1px solid #dbe2ed;border-radius:6px;height:70vh;min-height:360px;max-height:800px}
+
+.layout.layout-single{display:block;max-width:1200px}.layout-single .content{width:100%}

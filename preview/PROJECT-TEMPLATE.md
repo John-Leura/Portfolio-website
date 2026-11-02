@@ -1,11 +1,9 @@
-# Add a project through GitHub
-1. Open preview/test-project-1.html and copy its contents.
-2. Use Add file → Create new file to create preview/your-project.html. Paste the template.
-3. Change the title element, h1, and project content. Keep the shared navigation and script references.
-4. Use Add file → Upload files inside preview to upload screenshots or PDFs (for example preview/uploads/diagram.png). Link to them from your page with ./uploads/diagram.png.
-5. Edit preview/projects.js and add { title: "Your project", file: "your-project.html" } to the projects array, separated by a comma.
-6. Commit to main. GitHub Pages publishes the page and the sidebar entry after deployment.
+# Add project pages and materials
 
-All project pages share this one list. Home stays at preview/index.html.
-These test pages are placeholders, not claims about completed work.
-There is no build step, local server, or visitor upload form.
+Copy an existing page such as preview/database-systems.html to preview/your-project.html. Update its title, heading, course, contribution, and technical details. Add its title and filename to the projects array in preview/projects.js; this updates the sidebar on every page.
+
+Upload screenshots and PDFs through GitHub’s Add file → Upload files into preview/uploads/. Link to them with ./uploads/your-file.pdf. Add a descriptive alt attribute to images. Commit to main and wait for GitHub Pages deployment.
+
+The school project list is Password Juggernaut, Database Systems, Habit Tracker, Steganography Tool, Web Technologies Portfolio, and Unity Game Collection (last). Algorithms is not included. Original test pages remain available as templates but are no longer listed.
+
+Do not upload real passwords, credentials, or personal database records. Use sample data for demonstrations.

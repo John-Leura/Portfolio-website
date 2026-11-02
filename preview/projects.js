@@ -1,12 +1,28 @@
 // Add new projects here after uploading a copy of the project-page template.
 const projects = [
   {
-    "title": "Test Project 1",
-    "file": "test-project-1.html"
+    "title": "Password Juggernaut",
+    "file": "password-juggernaut.html"
   },
   {
-    "title": "Test Project 2",
-    "file": "test-project-2.html"
+    "title": "Database Systems",
+    "file": "database-systems.html"
+  },
+  {
+    "title": "Habit Tracker",
+    "file": "habit-tracker.html"
+  },
+  {
+    "title": "Steganography Tool",
+    "file": "steganography-tool.html"
+  },
+  {
+    "title": "Web Technologies Portfolio",
+    "file": "web-technologies.html"
+  },
+  {
+    "title": "Unity Game Collection",
+    "file": "unity-games.html"
   }
 ];
 const list = document.getElementById('project-list');

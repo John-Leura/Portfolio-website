@@ -7,6 +7,7 @@
 <title>Habit Tracker | John Leura</title>
 <link rel="stylesheet" href="./projects.css?v=school-projects-1">
 <script src="./projects.js?v=school-projects-1" defer></script>
+<link rel="stylesheet" href="./habit-tracker.css?v=readme-1">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -30,10 +31,67 @@
 <p class="eyebrow">DESIGN PREVIEW</p>
 <h1>Habit Tracker</h1>
 <p class="muted">Cloud Computing · CS 4843 · Summer 2025</p>
-<p>A team web application for creating habits and tracking weekly progress, deployed using containers and Kubernetes.</p>
-<section class="card"><h2>My contribution</h2><p>Contributed deployment and DevOps work. The team README credits John Leura with Deployment/DevOps; Leon Harb with backend development and deployment help; and Joseph Nwanebi with frontend development.</p></section>
-<section class="card"><h2>Technical focus</h2><p>The team README documents Docker and Kubernetes on Chameleon Cloud, a Java/Spring Boot backend, PostgreSQL persistence, and an HTML/CSS/JavaScript frontend.</p></section>
-<section class="card"><h2>Project materials</h2><p><a href="https://github.com/J0sephCs/HabbitTracker">View the team repository</a>. The proposal PDF and deployment screenshots will be added when available.</p><p class="muted">Architecture and contribution details are based on the <a href="https://github.com/J0sephCs/HabbitTracker/blob/main/README.md">team README</a>. A live deployment has not been verified.</p></section>
+<p>A team web application for tracking daily habits and weekly progress. My role was Deployment and DevOps.</p>
+<section class="card"><h2>Project demo</h2><p><a href="https://drive.google.com/file/d/1g3ZacEORZSPgImfUgNXgT8TbYPLaAWLu/view?usp=sharing">Watch the team’s demo video</a></p><p class="muted">Opens the original Google Drive video linked in the team README.</p></section>
+<section class="card readme" aria-labelledby="readme-title">
+<h2 id="readme-title">Team project README</h2>
+<p class="muted">Reproduced from the team repository. <a href="https://github.com/J0sephCs/HabbitTracker">Open the GitHub project</a> · <a href="https://github.com/J0sephCs/HabbitTracker/blob/main/README.md">Read the original README</a></p>
+<p class="readme-note">This is the team’s documentation, including its original setup instructions and feature claims. Some paths are placeholders; current security configuration and a live deployment have not been verified as matching every claim.</p>
+<h2>🧠 Habit Tracker Web Application</h2>
+<p>This Habit Tracker is a full-stack web application that allows users to create, manage, and track daily habits across a weekly grid. The app supports account creation, login/logout, and data persistence through a PostgreSQL database. It was deployed on <strong>Chameleon Cloud</strong> using <strong>Docker</strong> and <strong>Kubernetes</strong>.</p>
+<hr>
+<h3>📌 Features</h3>
+<ul><li>✅ User Signup &amp; Login (JWT Authentication)</li><li>➕ Add, Edit, and Delete Habits</li><li>📅 Weekly Habit Tracking Grid</li><li>📈 Progress Bar and Summary Sidebar</li><li>💾 Data persistence via PostgreSQL</li><li>🌐 Deployed with Docker &amp; Kubernetes on Chameleon Cloud</li><li>🔒 Role-based API protection with Spring Security</li></ul>
+<hr>
+<h3>⚙️ Tech Stack</h3>
+<div class="table-scroll"><table><thead><tr><th>Layer</th><th>Technologies</th></tr></thead><tbody><tr><td>Frontend</td><td>HTML, CSS, JavaScript</td></tr><tr><td>Backend</td><td>Java, Spring Boot, Spring Security, JWT</td></tr><tr><td>Database</td><td>PostgreSQL</td></tr><tr><td>DevOps</td><td>Docker, Kubernetes, Helm, Chameleon Cloud</td></tr><tr><td>Tools</td><td>VS Code, pgAdmin, Postman</td></tr></tbody></table></div>
+<hr>
+<h3>🏗️ Project Architecture</h3>
+<pre><code>[ Browser ] ⇄ [ HTML/CSS/JS ] ⇄ [ Spring Boot REST API ] ⇄ [ PostgreSQL DB ]
+                         ↑              ↑
+                 Chameleon Cloud     Kubernetes Cluster</code></pre>
+<ul><li>Frontend makes API requests to backend endpoints.</li><li>Backend handles user auth and CRUD operations on habits.</li><li>PostgreSQL persists user and habit data.</li><li>Docker containerizes services.</li><li>Kubernetes manages deployment and networking on Chameleon Cloud.</li></ul>
+<hr>
+<h3>🚀 How to Run Locally</h3>
+<h4>1. Clone the repo:</h4>
+<pre><code class="language-bash">git clone https://github.com/your-username/habit-tracker.git
+cd habit-tracker</code></pre>
+<h4>2. Setup Backend</h4>
+<pre><code class="language-bash">cd backend
+mvn clean package -DskipTests
+java -jar target/habits-0.0.1-SNAPSHOT.jar</code></pre>
+<h4>3. Run Frontend</h4>
+<p>Open <code>frontend/index.html</code> in any browser.</p>
+<hr>
+<h3>☁️ How to Deploy on Chameleon Cloud</h3>
+<p>1. <strong>SSH into the instance</strong></p>
+<pre><code class="language-bash">ssh -i group8.pem cc@&lt;INSTANCE_IP&gt;</code></pre>
+<p>2. <strong>Run Kubernetes Commands</strong></p>
+<pre><code class="language-bash">kubectl apply -f postgres-deployment.yaml
+kubectl apply -f backend-deployment.yaml
+kubectl apply -f backend-service.yaml</code></pre>
+<p>3. <strong>Port Forwarding (if needed)</strong></p>
+<pre><code class="language-bash">kubectl port-forward service/habit-tracker-backend-service 8080:8080</code></pre>
+<p>4. <strong>Open in Browser</strong></p>
+<pre><code>http://&lt;INSTANCE_PUBLIC_IP&gt;:&lt;NODE_PORT&gt;/index.html</code></pre>
+<hr>
+<h3>🧪 API Testing (Postman)</h3>
+<div class="table-scroll"><table><thead><tr><th>Endpoint</th><th>Method</th><th>Description</th></tr></thead><tbody><tr><td><code>/api/auth/signup</code></td><td>POST</td><td>Register new user</td></tr><tr><td><code>/api/auth/signin</code></td><td>POST</td><td>Login existing user</td></tr><tr><td><code>/api/habits</code></td><td>GET</td><td>Get all habits</td></tr><tr><td><code>/api/habits</code></td><td>POST</td><td>Add new habit</td></tr><tr><td><code>/api/habits/{id}</code></td><td>PUT</td><td>Edit habit by ID</td></tr><tr><td><code>/api/habits/{id}</code></td><td>DELETE</td><td>Delete habit by ID</td></tr></tbody></table></div>
+<hr>
+<h3>📸 Screenshots</h3>
+<p>(See <code>screenshots/</code> folder)</p>
+<ul><li>Home Page UI</li><li>Habit Grid Interface</li><li>pgAdmin database view</li><li>Postman API test results</li><li>Chameleon terminal output</li><li>Kubernetes pods/services</li></ul>
+<hr>
+<h3>🎥 Project Demo</h3>
+<p>Watch the full 10-minute demo video here:   <strong>[📺 Demo Video Link]</strong> <a href="https://drive.google.com/file/d/1g3ZacEORZSPgImfUgNXgT8TbYPLaAWLu/view?usp=sharing">Watch the demo video on Google Drive</a></p>
+<hr>
+<h3>👨‍💻 Contributors</h3>
+<ul><li><strong>Leon Harb</strong> – Backend Developer, Deployment Help  </li><li><strong>Joseph Nwanebi</strong> – Frontend Developer</li><li><strong>John Leura</strong> – Deployment, DevOps</li></ul>
+<hr>
+<h3>📄 License</h3>
+<p>This project was completed as part of the <strong>Cloud Computing course (CS 4843)</strong> at <strong>UTSA – Summer 2025</strong>.</p>
+<hr>
+</section>
 </main>
 </div>
 <footer>John Leura · Portfolio draft · <a href="../PF/index.html">View current website</a></footer>

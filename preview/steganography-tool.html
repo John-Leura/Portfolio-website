@@ -7,6 +7,7 @@
 <title>Steganography Tool | John Leura</title>
 <link rel="stylesheet" href="./projects.css?v=top-nav-2">
 <script src="./projects.js?v=school-projects-1" defer></script>
+<link rel="stylesheet" href="./steganography.css?v=options-1">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -30,10 +31,21 @@
 <p class="eyebrow">DESIGN PREVIEW</p>
 <h1>Steganography Tool</h1>
 <p class="muted">Steganography · Summer 2025</p>
-<p>A class tool for embedding images into other file types and extracting the embedded content.</p>
-<section class="card"><h2>My contribution</h2><p>Built a tool that accepts images for embedding and supports extracting them from carrier files.</p></section>
-<section class="card"><h2>Technical focus</h2><p>Steganography, file processing, and embedding/extraction workflows.</p></section>
-<section class="card"><h2>Project materials</h2><p>Supported file types, implementation details, source code, and a sample embed/extract walkthrough are still to be added.</p></section>
+<p>A team-built JPEG steganography tool that embeds files into JPEG images and extracts them using quantized DCT coefficients.</p>
+<section class="card"><h2>Project overview</h2><p>The project report describes a C implementation with fixed least-significant-bit embedding and an adaptive mode. It discusses file embedding and extraction, JPEG processing, testing, and technical challenges.</p><h3>My contribution</h3><p>The report credits me as team leader/secondary coder. My work included JPEG reading and cleanup, message loading and bit extraction, testing and debugging, and the final report.</p><p class="muted">Team 7: John Leura, Christian Evans, Christopher Perez, and Yousef Noor · CS 4463 · August 7, 2025.</p></section>
+<section class="card" aria-labelledby="report-title"><h2 id="report-title">Steganography Project Report</h2><p><a href="./documents/steganography-project.pdf" target="_blank" rel="noopener">Open report (PDF)</a> · <a href="./documents/steganography-project.pdf" download>Download report</a></p><object class="document-viewer" data="./documents/steganography-project.pdf" type="application/pdf" width="100%" height="650" aria-label="Steganography Project Report PDF"><p>Your browser cannot display PDFs inline. <a href="./documents/steganography-project.pdf">Open the project report</a>.</p></object></section>
+<section class="card"><h2>Choose how visitors explore the code</h2><p>These are design choices for the next step. Code and tool downloads will be added after a choice is made and the project files are uploaded.</p>
+<article class="delivery-option" id="option-a"><h3>Option A — GitHub repository and downloads</h3><p>Show a project summary and buttons for <strong>Browse source on GitHub</strong> and <strong>Download tool</strong>. Visitors explore folders and code on GitHub; a packaged tool can be linked from a release.</p><p><strong>Best for:</strong> the simplest setup and maintaining one source repository.</p><p><strong>Tradeoff:</strong> browsing the files takes visitors away from the portfolio.</p></article>
+<article class="delivery-option" id="option-b"><h3>Option B — File browser inside this page</h3><p>Add an expandable folder tree and a code viewer alongside it. Clicking a file displays its contents here. Provide individual file downloads and a <strong>Download project ZIP</strong> link; add a separate tool download when a packaged build is available.</p><p><strong>Best for:</strong> exploring folders, reading code, and downloading files without leaving the website.</p><p><strong>Tradeoff:</strong> the displayed files and download packages need updating when the project changes.</p></article>
+<article class="delivery-option" id="option-c"><h3>Option C — In-page browser plus GitHub <span class="choice-label">Recommended</span></h3><p>Combine Option B’s folder tree and code viewer with a link to the GitHub repository. Include separate downloads for the source ZIP and the packaged tool.</p><p><strong>Best for:</strong> your requested GitHub-style experience inside the portfolio, with the repository available for history and further exploration.</p><p><strong>Tradeoff:</strong> a little more setup; published downloads and the in-page files must stay in sync with the chosen code version.</p></article>
+<article class="delivery-option" id="option-d"><h3>Option D — Run a version of the tool in the browser</h3><p>Add image and payload pickers so visitors can try embedding or extraction on the page. This would require reviewing and adapting the C code, potentially using WebAssembly, then testing the result.</p><p><strong>Best for:</strong> a future interactive demonstration after the source and downloads are ready.</p><p><strong>Tradeoff:</strong> substantially more development work. Uploading a Windows executable alone will not make it run inside a webpage.</p></article>
+<p class="muted">Choose A, B, or C for the initial code showcase. Option D can be a later addition. No file browser or tool download has been enabled yet.</p></section>
+<section class="card"><h2>Demo video options</h2><p>No recording has been uploaded yet. Choose a video format independently of the code option.</p>
+<h3>Video 1 — YouTube embed</h3><p>Record and upload the walkthrough to YouTube, then place its player here. An unlisted video can be viewed by anyone with its link.</p>
+<h3>Video 2 — Google Drive video</h3><p>Use a shared Drive recording, like Habit Tracker’s demo link. We can add an embedded preview if its sharing settings allow it, plus an open-video link.</p>
+<h3>Video 3 — MP4 player</h3><p>Provide an MP4 and show a native player with playback controls. The final video’s size determines an appropriate hosting location.</p>
+<h3>Suggested walkthrough</h3><ol><li>Introduce the goal and your contribution.</li><li>Show the original JPEG and a small sample payload.</li><li>Demonstrate embedding, then extract the file.</li><li>Compare the extracted file with the original payload.</li><li>Briefly explain fixed versus adaptive mode and one challenge your team solved.</li></ol>
+<p class="muted">For example, tell me “Option C and Video 2.” We can then add the uploaded source, build instructions, and recording.</p></section>
 </main>
 </div>
 <footer>John Leura · Portfolio draft · <a href="../PF/index.html">View current website</a></footer>

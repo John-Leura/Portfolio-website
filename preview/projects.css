@@ -34,3 +34,8 @@
 .sidebar a:focus-visible {
   outline-color: #c4d5ff;
 }
+
+body { font-size: 17px; }
+.site-header { border-bottom: 4px solid #5275b7; }
+.site-header .brand { font-size: clamp(23px, 3vw, 26px); }
+.top-nav a { font-size: 17px; }

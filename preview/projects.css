@@ -6,3 +6,31 @@
 .document-viewer{display:block;border:1px solid #dbe2ed;border-radius:6px;height:70vh;min-height:360px;max-height:800px}
 
 .layout.layout-single{display:block;max-width:1200px}.layout-single .content{width:100%}
+
+.site-header,
+.sidebar {
+  background: linear-gradient(135deg, #101e38, #223e70);
+  border-color: #223e70;
+}
+.site-header .brand,
+.top-nav a,
+.sidebar h2,
+.sidebar a {
+  color: #f3f7ff;
+}
+.top-nav a[aria-current="page"],
+.top-nav a:hover {
+  color: #fff;
+}
+.sidebar a:hover,
+.sidebar a[aria-current="page"] {
+  color: #fff;
+  background: #2d4c82;
+}
+.sidebar a[aria-current="page"] {
+  border-left-color: #a9c1ff;
+}
+.site-header a:focus-visible,
+.sidebar a:focus-visible {
+  outline-color: #c4d5ff;
+}

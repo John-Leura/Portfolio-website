@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Projects | John Leura</title>
+<title>Portfolio | John Leura</title>
 <link rel="stylesheet" href="./projects.css?v=top-nav-2">
 <script src="./projects.js?v=school-projects-1" defer></script>
+<link rel="stylesheet" href="./portfolio.css?v=1">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -14,7 +15,7 @@
 <a class="brand" href="./index.html">John Leura's Webpage</a>
 <nav class="top-nav" aria-label="Main navigation">
 <a href="./index.html">Home</a>
-<a href="./projects.html" aria-current="page">Projects</a>
+<a href="./projects.html" aria-current="page">Portfolio</a>
 <a href="./resume.html">Resume</a>
 <a href="./contact.html">Contact</a>
 </nav>
@@ -27,16 +28,64 @@
 <noscript><p>Project pages: <a href="./password-juggernaut.html">Password Juggernaut</a> · <a href="./database-systems.html">Database Systems</a> · <a href="./habit-tracker.html">Habit Tracker</a> · <a href="./steganography-tool.html">Steganography Tool</a> · <a href="./web-technologies.html">Web Technologies Portfolio</a> · <a href="./unity-games.html">Unity Game Collection</a></p></noscript>
 </nav>
 <main id="content" class="content" tabindex="-1">
-<p class="eyebrow">DESIGN PREVIEW</p>
-<h1>Projects</h1>
-<p>Explore my computer science coursework through individual project pages.</p>
-<section class="card"><h2>School projects</h2><p>Each project has its own page with a brief overview, my contribution, and technical focus. Project files and demonstrations will be added as the original work is prepared for display.</p>
-<ol><li><a href="./password-juggernaut.html">Password Juggernaut</a> <span class="muted">— Applications Programming, Summer 2024</span></li>
-<li><a href="./database-systems.html">Database Systems</a> <span class="muted">— Database Systems, Spring 2025</span></li>
-<li><a href="./habit-tracker.html">Habit Tracker</a> <span class="muted">— Cloud Computing · CS 4843, Summer 2025</span></li>
-<li><a href="./steganography-tool.html">Steganography Tool</a> <span class="muted">— Steganography, Summer 2025</span></li>
-<li><a href="./web-technologies.html">Web Technologies Portfolio</a> <span class="muted">— Web Technologies, Summer 2025</span></li>
-<li><a href="./unity-games.html">Unity Game Collection</a> <span class="muted">— Game Development, Spring 2025</span></li></ol></section>
+<section class="portfolio-hero" aria-labelledby="portfolio-title">
+<h1 id="portfolio-title">Portfolio</h1>
+<p>Explore the software I’ve built, the photography I’m developing, and how I approach real estate research.</p>
+<nav class="portfolio-jump" aria-label="Portfolio sections">
+<a href="#technical-projects">Technical Projects</a>
+<a href="#photography">Photography</a>
+<a href="#real-estate">Real Estate</a>
+</nav>
+</section>
+<section class="portfolio-section" id="technical-projects" aria-labelledby="technical-title">
+<h2 id="technical-title">Technical Projects</h2>
+<p>Six projects from my computer science coursework.</p>
+<div class="portfolio-grid">
+<article class="portfolio-project">
+<h3><a href="./password-juggernaut.html">Password Juggernaut</a></h3>
+<p>An application for generating and saving passwords through a button-driven interface.</p>
+<ul class="portfolio-tags" aria-label="Technical focus"><li>Application development</li><li>Event handling</li></ul>
+</article>
+<article class="portfolio-project">
+<h3><a href="./database-systems.html">Database Systems</a></h3>
+<p>SQL scripts for creating and querying a MySQL database.</p>
+<ul class="portfolio-tags" aria-label="Technical focus"><li>SQL</li><li>MySQL</li></ul>
+</article>
+<article class="portfolio-project">
+<h3><a href="./habit-tracker.html">Habit Tracker</a></h3>
+<p>A team web app for tracking daily habits, with deployment work using Docker and Kubernetes.</p>
+<ul class="portfolio-tags" aria-label="Technical focus"><li>Docker</li><li>Kubernetes</li></ul>
+</article>
+<article class="portfolio-project">
+<h3><a href="./steganography-tool.html">Steganography Tool</a></h3>
+<p>A team-built C tool for embedding and extracting files in JPEG images.</p>
+<ul class="portfolio-tags" aria-label="Technical focus"><li>C</li><li>JPEG processing</li></ul>
+</article>
+<article class="portfolio-project">
+<h3><a href="./web-technologies.html">Web Technologies Portfolio</a></h3>
+<p>A personal website built during coursework with template customization and PHP.</p>
+<ul class="portfolio-tags" aria-label="Technical focus"><li>HTML &amp; CSS</li><li>PHP</li></ul>
+</article>
+<article class="portfolio-project">
+<h3><a href="./unity-games.html">Unity Game Collection</a></h3>
+<p>Three small games created in Unity during coursework.</p>
+<ul class="portfolio-tags" aria-label="Technical focus"><li>Unity</li><li>Game development</li></ul>
+</article>
+</div>
+</section>
+<section class="portfolio-section portfolio-interest photography" id="photography" aria-labelledby="photography-title">
+<h2 id="photography-title">Photography</h2>
+<p>A space for selected photographs and the stories behind them. I’ll add a gallery as I build a collection to share.</p>
+</section>
+<section class="portfolio-section portfolio-interest real-estate" id="real-estate" aria-labelledby="real-estate-title">
+<h2 id="real-estate-title">Real Estate</h2>
+<p>I’m interested in how to evaluate a home as an investment. I plan to share what I learn through research notes and sample property analyses.</p>
+<ul>
+<li><strong>Market research.</strong> Compare broad market trends and property types.</li>
+<li><strong>Sample analyses.</strong> Walk through assumptions about repairs, operating costs, and financing using hypothetical figures.</li>
+<li><strong>Lessons learned.</strong> Explain what would make an opportunity worth pursuing or passing on.</li>
+</ul>
+</section>
 </main>
 </div>
 <footer>John Leura · Portfolio draft · <a href="../PF/index.html">View current website</a></footer>
